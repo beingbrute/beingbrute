@@ -20,7 +20,7 @@ I build end-to-end analytics solutions — from raw data and SQL through to dash
 
 1,033,036 retail transactions through a three-layer Snowflake warehouse (RAW, STAGING, ANALYTICS), with row counts and revenue totals reconciled across every layer. RFM segmentation, monthly cohort retention, and product classification using a locally hosted LLM.
 
-**Key finding:** the Champions segment is 24.74% of customers but generates 74.04% of net revenue.
+**Key finding:** the Champions segment is 24.74% of identified customers but generates 74.04% of identified-customer net revenue.
 
 #### Loan Default Risk Analysis
 
