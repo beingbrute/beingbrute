@@ -14,6 +14,14 @@ I build end-to-end analytics solutions — from raw data and SQL through to dash
 
 ### Featured Projects
 
+#### Payment Transaction Controls & Fraud Risk Analytics
+
+`Databricks` `PySpark` `SQL` `Alteryx` `Python` `Power BI` `Tableau` `Excel` — https://github.com/beingbrute/payment-fraud-risk-analytics
+
+2,770,409 transfer/cash-out transactions run through a Bronze/Silver/Gold Databricks pipeline, five rule-based fraud controls (two cross-validated exactly against an independent Alteryx rebuild), a leakage-aware fraud-model comparison, and a 4-page Power BI dashboard.
+
+**Key finding:** the random forest's 100% precision is a red flag, not a win — it's reading the same balance-draining pattern PaySim uses to simulate fraud internally, not a generalizable fraud signal; the simpler rule-based controls (70%/65% precision) and logistic regression give a more trustworthy read on real-world performance.
+
 #### Customer Revenue & Retention Analytics
 
 `Python` `Snowflake` `Tableau` `local LLM` — https://github.com/beingbrute/Customer-Revenue-Retention-Analytics
@@ -42,15 +50,15 @@ Inventory fulfillment analysis including a production data-quality remediation a
 
 ### Tech Stack
 
-**Languages & Querying:** SQL (Snowflake, SQL Server, MySQL), Python (Pandas, NumPy), DAX, Power Query
+**Languages & Querying:** SQL (Snowflake, Databricks, SQL Server, MySQL), Python (Pandas, NumPy, scikit-learn), DAX, Power Query
 
 **BI & Visualisation:** Power BI, Tableau, Advanced Excel, Matplotlib, Seaborn
 
-**Data Engineering:** ETL pipelines, data warehousing, dimensional modeling, data validation and reconciliation
+**Data Engineering:** ETL pipelines, data warehousing, dimensional modeling, medallion architecture (Bronze/Silver/Gold), data validation and reconciliation
 
-**Analytics:** RFM segmentation, cohort retention analysis, KPI development, time intelligence, ABC analysis
+**Analytics:** RFM segmentation, cohort retention analysis, KPI development, time intelligence, ABC analysis, fraud control testing, predictive modeling
 
-**Tools:** Jupyter Notebook, Git, GitHub, VS Code, Ollama
+**Tools:** Jupyter Notebook, Git, GitHub, VS Code, Ollama, Alteryx Designer
 
 ---
 
