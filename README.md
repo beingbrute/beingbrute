@@ -4,9 +4,13 @@
 
 I build end-to-end analytics solutions — from raw data and SQL through to dashboards that answer a specific business question. I also test controls and models against their limits, including checking for data leakage and comparing results on a like-for-like basis. Based in Noida, India. Open to relocation, available to join immediately.
 
+Currently a freelance Data Annotator at Innodata, checking AI-generated charts, dashboards and reports against their underlying data.
+
 **Portfolio:** https://beingbrute.github.io
 
 **LinkedIn:** https://www.linkedin.com/in/aditya-ranjan-data
+
+**Tableau Public:** https://public.tableau.com/app/profile/aditya.ranjan7019
 
 **Email:** adityaranjan17302215@gmail.com
 
@@ -18,9 +22,9 @@ I build end-to-end analytics solutions — from raw data and SQL through to dash
 
 `Databricks` `PySpark` `SQL` `Alteryx` `Python` `Power BI` `Tableau` `Excel` — https://github.com/beingbrute/payment-fraud-risk-analytics
 
-6.36M PaySim transactions run through a Bronze/Silver/Gold Databricks pipeline with row-count and amount reconciliation at every layer, five rule-based fraud controls (two cross-checked exactly against an independent Alteryx rebuild), a leakage-aware model comparison, an hourly fraud-count forecast, and a 4-page Power BI dashboard plus a Tableau Public view.
+6.36M PaySim transactions run through a Bronze/Silver/Gold Databricks pipeline, with row count, total amount and fraud count reconciled at every layer. Six data-quality checks, five rule-based fraud controls (two cross-checked exactly against an independent Alteryx rebuild), a leakage-aware model comparison, an hourly fraud-count forecast, and a 4-page Power BI dashboard plus a Tableau Public view.
 
-**Key finding:** the random forest's 100% precision is a red flag, not a win. It's reading the same balance-draining pattern PaySim uses to simulate fraud. Measured fairly on the same test window, two simple rules (C3, C4) match its precision but catch only about half of fraud, while logistic regression catches 97% at 52% precision, the more realistic estimate of what a model can do on this kind of data.
+**Key finding:** the random forest's 100% precision is a red flag, not a win. It's reading the same balance-draining pattern PaySim uses to simulate fraud. Measured fairly on the same test window, two simple rules (a receiver-balance check and a transfer-then-cash-out match) reach 100% and 98.65% precision but catch only about half of fraud, while logistic regression catches 97% at 52% precision, the more realistic estimate of what a model can do on this kind of data.
 
 #### Customer Revenue & Retention Analytics
 
@@ -34,7 +38,7 @@ I build end-to-end analytics solutions — from raw data and SQL through to dash
 
 `Power BI` `DAX` `Power Query` — https://github.com/beingbrute/Loan-Default-Risk-Analysis
 
-A four-page risk report on a 255,347-loan portfolio covering borrower risk drivers, financial exposure and portfolio trends, built on a governed semantic model with YoY and YTD time intelligence.
+A four-page risk report on a 255,347-loan portfolio covering borrower risk drivers, financial exposure and YTD/YoY time intelligence, built on a semantic model with a dedicated date table. Rebuilt after I found the first version's default rate divided each group's defaults by all loans, then checked every KPI against the source data.
 
 **Key finding:** defaulted loans carry above-average balances — 13.15% of portfolio value against an 11.61% default rate.
 
@@ -54,7 +58,7 @@ Inventory fulfillment analysis including a production data-quality remediation a
 
 **BI & Visualisation:** Power BI, Tableau (Tableau Public), Advanced Excel (control-testing workpapers, pivot analysis), Matplotlib, Seaborn
 
-**Data Engineering:** ETL pipelines, data warehousing, dimensional modeling, medallion architecture (Bronze/Silver/Gold), data validation and reconciliation, data-quality checks, data masking (salted SHA-256 hashing of account IDs), cross-tool reconciliation (SQL vs Alteryx)
+**Data Engineering:** ETL pipelines, data warehousing, medallion architecture (Bronze/Silver/Gold), Power BI semantic modelling, data validation and reconciliation, data-quality checks, pseudonymisation (salted SHA-256 hashing of account IDs), cross-tool reconciliation (SQL vs Alteryx)
 
 **Analytics:** RFM segmentation, cohort retention analysis, KPI development, time intelligence, ABC analysis, fraud control testing, predictive modeling, precision/recall and PR-AUC evaluation, model leakage detection, hourly time-series forecasting (seasonal naive baseline vs regression back-test), threshold trade-off analysis, stratified sample review
 
@@ -72,4 +76,4 @@ Inventory fulfillment analysis including a production data-quality remediation a
 
 **Make the insight usable.** Clear dashboards, with the limits of the analysis stated plainly.
 
-Every project above includes the underlying SQL and DAX, full documentation, and the reasoning behind each decision.
+Every project above includes its code (SQL, Python or DAX), documentation, and the reasoning behind each decision.
