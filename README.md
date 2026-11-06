@@ -30,6 +30,16 @@ Currently a freelance Data Annotator at Innodata, checking AI-generated charts, 
 
 **Recommendation:** keep the two strongest rules as primary controls, retire or redesign the rule that flagged 2.49M transactions for 45 frauds, and use logistic regression to prioritize alerts.
 
+#### FDA Drug Shortage Analysis
+
+`PostgreSQL` `SQL` `Google Sheets` `Excel` `Python` `Local LLM` — https://github.com/beingbrute/FDA-Drug-Shortage-Analysis
+
+The US FDA drug shortages list (1,605 records) analysed in Google Sheets, then loaded into a normalised PostgreSQL database with 23 data-quality checks, a read-only analyst role, indexing tests, a verified backup and restore, and a refresh where every change is logged by an audit trigger. Also tested how accurately a local LLM (Qwen3 4B) pulls recovery dates from free-text notes, and built an oncology brief with an Excel scoring model that adds FDA's NDC Directory.
+
+**Key finding:** 69 drugs are in current shortage, with a median of 4.9 years on the list, and pediatric medicines are the most widely affected (17 of 69). The LLM matched the rules on 57 of 60 recovery dates; a format check caught two broken dates, but only comparing against a reference caught the date it missed.
+
+**Recommendation (oncology brief):** shortlist streptozocin and pentostatin, which have no generic supplier, for a feasibility study, and re-run the screen monthly as the list changes.
+
 #### Customer Revenue & Retention Analytics
 
 `Python` `Snowflake` `Tableau` `local LLM` — https://github.com/beingbrute/Customer-Revenue-Retention-Analytics
@@ -64,15 +74,15 @@ Inventory fulfillment analysis on a practice dataset, including a data-quality f
 
 ### Tech Stack
 
-**Languages & Querying:** SQL (Snowflake, Databricks, SQL Server, MySQL), Python (Pandas, NumPy, scikit-learn, PySpark), DAX, Power Query
+**Languages & Querying:** SQL (PostgreSQL, Snowflake, Databricks, SQL Server, MySQL), Python (Pandas, NumPy, scikit-learn, PySpark), DAX, Power Query
 
 **BI & Visualization:** Power BI, Tableau (Tableau Public), Advanced Excel (control-testing workpapers, pivot analysis), Matplotlib, Seaborn
 
-**Data Engineering:** ETL pipelines, data warehousing, medallion architecture (Bronze/Silver/Gold), Power BI semantic modeling, data validation and reconciliation, data-quality checks, pseudonymization (salted SHA-256 hashing of account IDs), cross-tool reconciliation (SQL vs Alteryx)
+**Data Engineering:** ETL pipelines, data warehousing, medallion architecture (Bronze/Silver/Gold), Power BI semantic modeling, data validation and reconciliation, data-quality checks, pseudonymization (salted SHA-256 hashing of account IDs), cross-tool reconciliation (SQL vs Alteryx), database design (keys, CHECK constraints), role-based access, backup and restore, audit triggers
 
-**Analytics:** RFM segmentation, cohort retention analysis, KPI development, time intelligence, ABC analysis, fraud control testing, predictive modeling, precision/recall and PR-AUC evaluation, model leakage detection, hourly time-series forecasting (seasonal naive baseline vs regression back-test), threshold trade-off analysis, stratified sample review
+**Analytics:** RFM segmentation, cohort retention analysis, KPI development, time intelligence, ABC analysis, fraud control testing, predictive modeling, precision/recall and PR-AUC evaluation, model leakage detection, hourly time-series forecasting (seasonal naive baseline vs regression back-test), threshold trade-off analysis, stratified sample review, hypothesis testing (Fisher's exact test), weighted scoring models
 
-**Tools:** Jupyter Notebook, Git, GitHub, GitHub Desktop, VS Code, Ollama, Alteryx Designer, Databricks
+**Tools:** Jupyter Notebook, Git, GitHub, GitHub Desktop, VS Code, Ollama, Alteryx Designer, Databricks, Google Sheets, Excel
 
 ---
 
